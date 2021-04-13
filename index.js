@@ -4,16 +4,25 @@ import { fifaData } from './fifa.js';
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Practice accessing data by console.log-ing the following pieces of data note, you may want to filter the data first 😉*/
-
+let year2014 = fifaData.filter(i => i.Year === 2014 && i['Stage'] === 'Final');
+console.log(year2014);
 //(a) Home Team name for 2014 world cup final
-
+console.log(year2014[0]['Home Team Name']);
 //(b) Away Team name for 2014 world cup final
-
+console.log(year2014[0]['Away Team Name']);
 //(c) Home Team goals for 2014 world cup final
-
+console.log(year2014[0]['Home Team Goals']);
 //(d) Away Team goals for 2014 world cup final
-
+console.log(year2014[0]['Away Team Goals']);
 //(e) Winner of 2014 world cup final */
+let winner = fifaData.filter(i => i.Year === 2014 && i.Stage === 'Final');
+if (winner[0]['Home Team Goals'] > winner[0]['Away Team Goals']){
+    console.log(winner[0]['Home Team Name']);
+} else if (winner[0]['Home Team Goals'] < winner[0]['Away Team Goals']){
+    console.log(winner[0]['Away Team Name']);
+} else {
+    console.log('Tie!');
+}
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
